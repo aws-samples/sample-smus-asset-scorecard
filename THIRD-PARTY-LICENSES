@@ -1,0 +1,15 @@
+## Third-Party Licenses
+
+### boto3
+License: Apache License 2.0
+Link: https://github.com/boto/boto3/blob/develop/LICENSE
+
+### awswrangler
+License: Apache License 2.0
+Link: https://github.com/awslabs/aws-data-wrangler/blob/main/LICENSE
+
+### aws-cdk-lib (AWS CDK)
+License: Apache License 2.0
+Link: https://github.com/aws/aws-cdk/blob/main/LICENSE
+
+All listed licenses are compatible with this sample's MIT-0 license.

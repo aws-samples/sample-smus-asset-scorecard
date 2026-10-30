@@ -1,0 +1,14 @@
+{
+  "_comment": "Replace <project-id-*> with your actual DataZone project IDs. Run: aws datazone list-projects --domain-identifier <your-domain-id>",
+  "default": {
+    "required_forms": ["SampleAssetForm"]
+  },
+  "projects": {
+    "<project-id-standard>": {
+      "required_forms": ["SampleAssetForm"]
+    },
+    "<project-id-regulated>": {
+      "required_forms": ["SampleAssetForm", "DataClassificationForm"]
+    }
+  }
+}

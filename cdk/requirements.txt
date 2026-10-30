@@ -1,0 +1,4 @@
+# AWS CDK v2 — single monolithic library plus the constructs base.
+aws-cdk-lib>=2.130.0,<3.0.0
+constructs>=10.0.0,<11.0.0
+cdk-nag>=2.0.0,<3.0.0

@@ -1,0 +1,40 @@
+{
+  "app": "python3 app.py",
+  "watch": {
+    "include": ["**"],
+    "exclude": [
+      "README.md",
+      "cdk*.json",
+      "requirements*.txt",
+      "**/__pycache__",
+      "**/*.pyc"
+    ]
+  },
+  "context": {
+    "@aws-cdk/core:checkSecretUsage": true,
+    "@aws-cdk/aws-iam:minimizePolicies": true,
+
+    "_comment": "Pipeline configuration. Override on the CLI with -c key=value. Only dz_domain_id is required (no default). gov_s3tables_bucket defaults to gov-obs-tables-<account>-<region>; override with -c gov_s3tables_bucket=<name> if you want a custom name.",
+
+    "name_prefix": "gov-obs",
+
+    "export_database": "aws-sagemaker-catalog",
+    "export_table": "asset",
+    "export_catalog": "s3tablescatalog/aws-sagemaker-catalog",
+    "export_schema": "asset_metadata",
+    "export_s3tables_bucket": "aws-sagemaker-catalog",
+
+    "gov_database": "governance_metadata",
+    "gov_table": "asset_compliance",
+
+    "min_expected_dq_rules": 3,
+
+    "scheduler_timezone": "America/Sao_Paulo",
+    "scheduler_cron_hour": 5,
+
+    "_pandas_layer_arn_comment": "336392948345 is the public AWS-owned account that hosts the AWSSDKPandas managed Lambda layer — it is NOT a personal/customer account ID. See https://aws-sdk-pandas.readthedocs.io/en/stable/layers.html",
+    "pandas_layer_arn": "arn:aws:lambda:us-east-1:336392948345:layer:AWSSDKPandas-Python312:29",
+
+    "lambda_code_path": "../lambda"
+  }
+}

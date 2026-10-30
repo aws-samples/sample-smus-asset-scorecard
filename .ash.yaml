@@ -1,0 +1,6 @@
+# ASH (Automated Security Helper) configuration
+project_name: sample-smus-asset-scorecard
+global_settings:
+  ignore_paths:
+    - path: "cdk/cdk.out/**"
+      reason: "CDK-generated build output (synthesized templates and bundled assets); not committed to the repo and not source code."
